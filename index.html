@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    
+    <div class="calculator">
+        <div class="container">
+            <div class="display">
+             <div class="previous"></div>
+             <div class="current"></div>  
+            </div>
+        <div class="buttons">
+            <button class="clear">CE</button>
+            <button class="num">(</button>
+            <button class="num">)</button>
+            <button class="operator">%</button>
+          </div>
+            <div class="buttons">
+            <button class="num">7</button>
+            <button class="num">8</button>
+            <button class="num">9</button>
+            <button class="operator">X</button>
+          </div>
+            <div class="buttons">
+            <button class="num">4</button>
+            <button class="num">5</button>
+            <button class="num">6</button>
+            <button class="operator">+</button>
+          </div>
+            <div class="buttons">
+            <button class="num">1</button>
+            <button class="num">2</button>
+            <button class="num">3</button>
+            <button class="operator">-</button>
+          </div>
+            <div class="buttons">
+            <button class="dot">.</button>
+            <button class="num">0</button>
+            <button class="equal">=</button>
+        </div>
+        </div>
+    </div>
+  </body>
+  <script>
+   
+      let screen = document.querySelector("#display");
+    let previous=  document.querySelector("#previous");
+    let current=  document.querySelector("#current");
+
+    let num =  document.querySelectorAll("#num");
+    let operator =  document.querySelectorAll("operator");
+    let equal =  document.querySelector("#equal");
+    let dot =  document.querySelector("#dot");
+    let clear = document.querySelector("#clear");
+    let currentval ='';
+    let previousval= '';
+    
+    num.forEach((num)=> num.addEventListener("click",function(e){ 
+     handlenum(e.target.textContent);
+  }))
+
+    
+function handlenum(num){
+  console.log(num);
+}
+  </script>
